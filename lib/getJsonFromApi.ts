@@ -7,7 +7,8 @@ export const getJsonFromApi = async <T>(
     process.env.NEXT_PUBLIC_SITE_URL ||
     (process.env.VERCEL_URL && `https://${process.env.VERCEL_URL}`) ||
     'http://localhost:3000'
-  console.log(typeof window !== 'undefined' && window.location.origin)
+  console.log(process.env.VERCEL_URL, 'vu')
+  console.log(baseUrl, 'bu')
   const res = await fetch(`${baseUrl}/api/get-data?file=${file}`, {
     next: { revalidate: DOBA },
   })
