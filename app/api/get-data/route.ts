@@ -35,7 +35,7 @@ export async function GET(request: NextRequest) {
     if (!res.ok) {
       throw new Error(`Failed to fetch file: ${res.statusText}`)
     }
-
+    console.log(res)
     const json = await res.json()
     return NextResponse.json(json)
   } catch (error: any) {
