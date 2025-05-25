@@ -5,12 +5,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { Card, Container, SectionTitle, Separator } from '@/components/ui'
-import { getJsonFromApi } from '@/lib/getJsonFromApi'
+import { fetchGdiscData } from '@/lib/fetch-gdisc-data'
 import { techResolver } from '@/lib/tech-resolver'
 import type { Projects as ProjectsType } from '@/types/projects'
 
 export const Projects = async () => {
-  const projects = await getJsonFromApi<ProjectsType[]>('projects')
+  const projects = await fetchGdiscData<ProjectsType[]>('projects')
 
   return (
     <Card id="projects">

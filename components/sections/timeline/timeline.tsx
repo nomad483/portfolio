@@ -3,11 +3,11 @@ import {
   ExperienceList,
 } from '@/components/sections/timeline/atoms'
 import { Card, Container, SectionTitle } from '@/components/ui'
-import { getJsonFromApi } from '@/lib/getJsonFromApi'
+import { fetchGdiscData } from '@/lib/fetch-gdisc-data'
 import type { Timeline as TimelineType } from '@/types/timeline'
 
 export const Timeline = async () => {
-  const timeline = await getJsonFromApi<TimelineType>('timeline')
+  const timeline = await fetchGdiscData<TimelineType>('timeline')
 
   return (
     <Card id="timeline">
