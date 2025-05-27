@@ -11,6 +11,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_GOOGLE_DRIVE_TIMELINE_FILE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_DRIVE_TIMELINE_FILE_ID }}
+      NEXT_PUBLIC_GOOGLE_DRIVE_PROJECTS_FILE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_DRIVE_PROJECTS_FILE_ID }}
+      NEXT_PUBLIC_GOOGLE_DRIVE_SKILLS_FILE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_DRIVE_SKILLS_FILE_ID }}
 
     steps:
       - name: Checkout code
