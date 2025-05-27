@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import {
   SiGithub,
   SiInstagram,
-  SiTelegram,
+  // SiTelegram,
 } from '@icons-pack/react-simple-icons'
 import { ArrowRight, ExternalLink, Mail, Send } from 'lucide-react'
 import Link from 'next/link'
