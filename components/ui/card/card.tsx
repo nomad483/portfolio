@@ -12,7 +12,7 @@ export const Card = ({ children, className, internalClassName, id }: Props) => {
   return (
     <div
       className={cn(
-        'bg-card-gradient border-foreground/10 m-5 box-border w-full rounded-2xl border p-7 backdrop-blur-lg transition-all ease-in-out hover:scale-105',
+        'bg-card-gradient border-foreground-10 custom-blur m-1.5 box-border w-full rounded-2xl border p-7 transition-all ease-in-out hover:scale-105 md:m-3',
         className
       )}
       id={id}

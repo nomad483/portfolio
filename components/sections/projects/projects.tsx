@@ -41,7 +41,7 @@ export const Projects = async () => {
                     return (
                       <div
                         key={`${project.title}_${tag}`}
-                        className="hover:bg-foreground/10 flex items-center gap-2 rounded-lg px-2 text-lg transition-all ease-in-out"
+                        className="hover:bg-foreground-10 flex items-center gap-2 rounded-lg px-2 text-lg transition-all ease-in-out"
                       >
                         <Logo
                           className={`h-4 w-4 ${stroke ? 'stroke-foreground' : 'fill-foreground'}`}

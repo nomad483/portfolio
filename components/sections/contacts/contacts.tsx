@@ -63,39 +63,39 @@ export const Contacts = () => {
         <div className="flex flex-col gap-2">
           <div className="flex flex-wrap items-center gap-3">
             <Button asChild>
-              <Link href="mailto:">
+              <Link href="mailto:mykolazakliuka.work@gmail.com">
                 <Mail />
                 Email
                 <ArrowRight />
               </Link>
             </Button>
             <Button asChild>
-              <Link href="">
+              <Link href="https://github.com/nomad483">
                 <SiGithub />
                 GitHub
                 <ExternalLink />
               </Link>
             </Button>
             <Button asChild>
-              <Link href="">
+              <Link href="https://www.linkedin.com/in/mykola-zakliuka-053534192/">
                 in LinkedIn
                 <ExternalLink />
               </Link>
             </Button>
             <Button asChild>
-              <Link href="">
+              <Link href="https://www.instagram.com/developer_notes/">
                 <SiInstagram />
                 Instagram
                 <ExternalLink />
               </Link>
             </Button>
-            <Button asChild>
-              <Link href="">
-                <SiTelegram />
-                Telegram
-                <ExternalLink />
-              </Link>
-            </Button>
+            {/*<Button asChild>*/}
+            {/*  <Link href="">*/}
+            {/*    <SiTelegram />*/}
+            {/*    Telegram*/}
+            {/*    <ExternalLink />*/}
+            {/*  </Link>*/}
+            {/*</Button>*/}
           </div>
           <Separator>or</Separator>
           <Form {...form}>

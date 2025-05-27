@@ -8,7 +8,7 @@ type Props = {
 
 export const SkillList = ({ skills }: Props) => {
   return (
-    <ul className="flex w-full list-none flex-row flex-wrap justify-center gap-3 pl-5">
+    <ul className="flex w-full list-none flex-row flex-wrap justify-center gap-2 pl-5">
       {skills.map((skill, index) => (
         <SkillListItem
           key={`${skill.key}_${skill.id}_${index}`}

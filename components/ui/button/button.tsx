@@ -10,8 +10,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-foreground/10 hover:bg-foreground/20',
-        ghost: 'hover:bg-foreground/20',
+        default: 'bg-foreground-10 hover:bg-foreground-20',
+        ghost: 'hover:bg-foreground-20 border-foreground-20 border-1',
       },
       size: {
         default: 'h-10 px-4 rounded-xl',

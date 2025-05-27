@@ -13,6 +13,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "clean": "rm -rf .next node_modules yarn.lock",
     "lint": "next lint",
     "prepare": "husky",
     "typecheck": "tsc --noEmit",
@@ -26,6 +27,12 @@
       "yarn prettier --write",
       "yarn eslint --fix"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -62,7 +69,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-tailwindcss": "^3.18.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "pinst": "^3.0.0",

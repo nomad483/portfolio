@@ -28,7 +28,7 @@ export const Separator = forwardRef<
     ref
   ) => {
     const styles = cn(
-      'bg-foreground/20',
+      'bg-foreground-20',
       !children && 'shrink-0 ',
       orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]'
     )
