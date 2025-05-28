@@ -54,6 +54,7 @@ export const Projects = async () => {
                 <div className="mt-2 flex gap-3 pl-2 text-lg">
                   <Link
                     href={project.url}
+                    target="_blank"
                     className="flex items-center justify-center text-blue-500 hover:underline"
                   >
                     View Project
@@ -62,6 +63,7 @@ export const Projects = async () => {
                   {project.github_url && (
                     <Link
                       href={project.github_url}
+                      target="_blank"
                       className="flex items-center justify-center text-blue-500 hover:underline"
                     >
                       <SiGithub size={15} className="mr-1" />
