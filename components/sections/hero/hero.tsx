@@ -49,7 +49,7 @@ export const Hero = () => {
           <Button variant="ghost" size="sm" asChild>
             <Link
               target="_blank"
-              href="https://drive.google.com/file/d/1TaaimCa6tL7EF97ruz-616zIDTgJDGMQ/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1V5rIQSUyg0H5BNwH8IQiNLECDMA4CIPu/view?usp=share_link"
               scroll={true}
             >
               CV
