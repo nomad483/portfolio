@@ -189,6 +189,7 @@ export const Contacts = () => {
                   <FormItem>
                     <Turnstile
                       siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                      options={{size: 'compact'}}
                       onSuccess={(token) => {
                         form.setValue('turnstileToken', token, {
                           shouldValidate: true,

@@ -7,7 +7,7 @@ import {
 } from '@/components/sections'
 import { PageContainer } from '@/components/ui'
 
-export const revalidate = 10 // 86400 - 24 hours in seconds
+export const revalidate = 86400 // 86400 - 24 hours in seconds
 
 export default function Home() {
   return (
