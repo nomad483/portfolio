@@ -4,11 +4,26 @@ import { Resend } from 'resend'
 import { FormSchema } from '@/components/forms/contacts/contacts'
 import { Email } from '@/components/templates'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn('RESEND_API_KEY is not set, skipping email sending')
+      return null
+    }
+    throw new Error('RESEND_API_KEY is required in production')
+  }
+  return new Resend(apiKey)
+}
 
 export async function POST(req: Request) {
   const body = await req.json()
   const parsed = FormSchema.safeParse(body)
+  const resend = getResend()
+
+  if (!resend) {
+    return new Response(null, { status: 204 })
+  }
 
   if (!parsed.success) {
     return NextResponse.json({ error: 'Invalid input' }, { status: 400 })
